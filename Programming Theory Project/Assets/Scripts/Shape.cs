@@ -1,29 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Shape : MonoBehaviour
+public abstract class Shape : MonoBehaviour
 {
-
-    string name;
-    Color color;
+    //[Encapsulation]
+    protected string ObjName { get; private set; }
+    protected string ColorName { get; set; }
+    protected Color Color { get; set; }
+    [SerializeField] protected Text textMessage;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        
+        ObjName = gameObject.name;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //[Abstraction]
+    protected abstract void DisplayText();
 
-    public void DisplayText()
-    {
-        Debug.Log("Hehe");
-    }
+    //[Abstraction]
+    protected abstract void ObjectInfo();
 
     private void OnMouseDown()
     {
