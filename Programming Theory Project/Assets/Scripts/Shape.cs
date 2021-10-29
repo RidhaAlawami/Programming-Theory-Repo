@@ -11,7 +11,6 @@ public abstract class Shape : MonoBehaviour
     protected Color Color { get; set; }
     [SerializeField] protected Text textMessage;
 
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         ObjName = gameObject.name;

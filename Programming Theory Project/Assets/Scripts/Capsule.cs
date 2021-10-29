@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//[inheritance]
 public class Capsule : Shape
 {
     //[Encapsulation]

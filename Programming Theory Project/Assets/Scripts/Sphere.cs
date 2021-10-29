@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//[inheritance]
 public class Sphere : Shape
 {
     //[Encapsulation]
@@ -14,6 +15,7 @@ public class Sphere : Shape
         ObjectInfo();
     }
 
+    //[Polymorphism]
     protected override void DisplayText()
     {
         string message = string.Format("This is a {0}, it has {1} color with a radius of {2} meters.", ObjName, ColorName, Radius);

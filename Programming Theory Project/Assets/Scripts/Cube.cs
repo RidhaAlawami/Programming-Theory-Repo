@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//[inheritance]
 public class Cube : Shape
 {
     //[Encapsulation]
@@ -14,6 +15,7 @@ public class Cube : Shape
         ObjectInfo();
     }
 
+    //[Polymorphism]
     protected override void DisplayText()
     {
         string message = string.Format("This is a {0}, it has {1} color with a size of {2} in meters.", ObjName, ColorName, Size);
