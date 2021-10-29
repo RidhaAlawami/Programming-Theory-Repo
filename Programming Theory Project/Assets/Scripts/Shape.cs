@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public abstract class Shape : MonoBehaviour
 {
-    //[Encapsulation]
+    // ENCAPSULATION
     protected string ObjName { get; private set; }
     protected string ColorName { get; set; }
     protected Color Color { get; set; }
@@ -16,14 +16,13 @@ public abstract class Shape : MonoBehaviour
         ObjName = gameObject.name;
     }
 
-    //[Abstraction]
     protected abstract void DisplayText();
 
-    //[Abstraction]
     protected abstract void ObjectInfo();
 
     private void OnMouseDown()
     {
+        // ABSTRACTION
         DisplayText();
     }
 }

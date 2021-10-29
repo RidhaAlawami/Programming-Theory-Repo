@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//[inheritance]
+// INHERITANCE
 public class Capsule : Shape
 {
-    //[Encapsulation]
+    // ENCAPSULATION
     private float Radius { get; set; }
     private float Height { get; set; }
 
-    //[Polymorphism]
+    // POLYMORPHISM
     protected override void Start()
     {
+        // ABSTRACTION
         base.Start();
         ObjectInfo();
     }
 
-    //[Polymorphism]
+    // POLYMORPHISM
     protected override void DisplayText()
     {
         string message = string.Format("This is a {0}, it has {1} color with a {2} meter radius and a height of {3} meters.", ObjName, ColorName, Radius, Height);
         textMessage.text = message;
     }
 
-    //[Polymorphism]
+    // POLYMORPHISM
     protected override void ObjectInfo()
     {
         Color = Color.blue;
